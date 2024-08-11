@@ -604,3 +604,19 @@ h2 {
 #associated h2 {
   margin-bottom: 80px;
 }
+
+/* Add this to your existing CSS file */
+
+.btn-12 a {
+  color: white; /* Change to the desired color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the link fill the button */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.btn-12 a:hover {
+  color: lightblue; /* Change to the desired hover color */
+}
