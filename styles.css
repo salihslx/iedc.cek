@@ -82,53 +82,6 @@ header {
   font-weight: bold; /* Make text bold */
 }
 
-/* Button 
-.hero button {
-    --color: #0077ff;
-    font-family: inherit;
-    display: inline-block;
-    width: 6em;
-    height: 2.6em;
-    line-height: 2.5em;
-    overflow: hidden;
-    cursor: pointer;
-    margin: 20px;
-    font-size: 17px;
-    z-index: 1;
-    color: var(--color);
-    border: 0.5px solid var(--color);
-    border-radius: 6px;
-    position: relative;
-  }
-  
-  .hero button::before {
-    position: absolute;
-    content: "";
-    background: var(--color);
-    width: 150px;
-    height: 200px;
-    z-index: -1;
-    border-radius: 50%;
-  }
-  
-  .hero button:hover {
-    color: white;
-  }
-  
-  .hero button:before {
-    top: 100%;
-    left: 100%;
-    transition: 0.3s all;
-  }
-  
-  .hero button:hover::before {
-    top: -30px;
-    left: -30px;
-  }
-*/
-
-/* From Uiverse.io by Mike11jr */
-
 /* From Uiverse.io by doniaskima */
 .btn-12,
 .btn-12 *,
@@ -238,7 +191,7 @@ header {
   padding: 10px;
   background-color: #f8f7f4f6;
   box-shadow: #33333389 2px 15px 35px;
-  border-radius: 1.85rem;
+  border-radius: 10px;
   color: #252525;
 }
 #about h2 {
@@ -246,7 +199,7 @@ header {
 }
 
 .about-container {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
@@ -368,7 +321,6 @@ header {
 }
 
 .card {
-  border: 1px solid #a2cfff;
   border-radius: 5px;
   margin-bottom: 15px;
 }
@@ -610,9 +562,191 @@ h2 {
 .btn-12 a {
   color: white; /* Change to the desired color */
   text-decoration: none; /* Remove underline */
- /* Adjust padding as needed */
+  /* Adjust padding as needed */
 }
 
 .btn-12 a:hover {
   color: lightblue; /* Change to the desired hover color */
+}
+
+/* From Uiverse.io by JohnnyCSilva */
+
+.Hexis {
+  margin-top: 4rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardhexis {
+  margin-top: 5rem;
+  width: 350px;
+  height: 360px;
+  align-items: center;
+  background: white;
+  border-radius: 27px;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  transition: 0.2s ease-in-out;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: linear-gradient(#e66465, #9198e5);
+  display: flex;
+  align-items: top;
+  justify-content: right;
+}
+
+.text {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon-box {
+  margin-top: 14px;
+  /* align-items: center; */
+  justify-content: center;
+  width: 130%;
+  background-color: #1191ff;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* From Uiverse.io by kleenpulse */
+.btnR {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: 0.125em;
+  --curve-size: 0.5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  cursor: pointer;
+  /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  clip-path: polygon(
+    /* Top-left */ 0% var(--curve-size),
+    var(--curve-size) 0,
+    /* top-right */ 100% 0,
+    100% calc(100% - var(--curve-size)),
+    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+    /* bottom-right 2 */ 0 100%
+  );
+  transition: color 250ms;
+}
+
+.btnR::after,
+.btnR::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.btnR::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+
+.btnR::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.btnR:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.btnR:where(:hover, :focus) {
+  color: #fff;
+}
+
+.text .h3 {
+  font-family: "Lucida Sans" sans-serif;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.text .p {
+  font-family: "Lucida Sans" sans-serif;
+  color: #999999;
+  font-size: 13px;
+}
+
+.icon-box .span {
+  margin-left: 10px;
+  font-family: "Lucida Sans" sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.about-heading {
+  text-decoration: underline;
+  text-decoration-color:  #0c0d13 ;
+  text-underline-offset: 20px; /* Adjust the value as needed */
 }
